@@ -1,0 +1,68 @@
+<header>
+    <h1>
+        Bienvenido a XibalbaData 
+    </h1>
+</header>
+
+<nav>
+    <a href="inicio-sesion-prueba.html">Acceder
+      <i class="fas fa-check"></i>
+    </a>
+    <a href="nvo-usuario-prueba.html">Registrarse
+      <i class="fa-solid fa-pencil"></i>
+    </a>
+    <button id="btn-modal" onclick="activar()">Nosotros
+      <i class="fa-solid fa-circle-info"></i>
+    </button>
+    <button id="btn-modal" onclick="activar2()">Contactanos
+      <i class="fa-solid fa-phone"></i>
+    </button>
+
+    
+</nav>
+  
+<div id="myModal" class="modal">
+  <div class="modal-content">
+      <span class="close">&times;</span>
+        <h2>Acerca de XibalbaData</h2>
+      <p>Herramienta encargada de dar soporte a la toma de decisones respecto a recursos hídricos subterráneos, con base en la gestión eficiente de información.
+        <br>
+        Este sistema es capaz de capturar información de forma remota en tiempo real, procesarla y desplegarla en función de las necesidades del usuario.
+      </p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+<div id="myModal2" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Información de Contacto</h2>
+        <p>Mtro. Jimmy Gonzalez Becerril.
+            <br>
+            Tel. 712 178 5135
+            <br>
+           Correo: jgonzalesb011@alumno.uaemex.mx
+          </p>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+
+  <section>
+    <h2>Gestión de información </h2>
+    <p>El adecuado manejo de la información generada durante la extracción de aguas subterráneas permite el uso eficiente de recursos durante la operación y mantenimiento de sistemas de extracción.</p>
+    <br>
+    <div class="carousel" (mouseenter)="stopAutoplay()" (mouseleave)="startAutoplay()">
+      <div class="carousel-images" [style.transform]="getTransform()">
+        <img *ngFor="let img of images; let i = index" [src]="img" [alt]="'Imagen ' + (i + 1)" />
+      </div>
+
+      <button class="button-prev" (click)="showSlide(current - 1)">&#10094;</button>
+      <button class="button-next" (click)="showSlide(current + 1)">&#10095;</button>
+
+      <div class="indicators">
+        <span *ngFor="let img of images; let i = index" [class.active]="i === current" (click)="showSlide(i)"></span>
+      </div>
+    </div>
+</section>

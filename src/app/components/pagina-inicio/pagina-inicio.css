@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+body{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white; /* Color de fondo azul claro */
+  color: #01579b; /* Color de texto azul más oscuro */
+  line-height: 1.6;
+}
+
+header {
+  background-color: #0288d1; /* Azul intenso para el encabezado */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.5em;
+  width: 100%;
+
+}
+
+section h2 {
+  color: #01579b; /* Azul oscuro */
+  font-size: 2.5em;
+  margin: 0 0 8px 0;
+  text-align: center;
+}
+
+section p {
+  color: #0288d1; /* Azul más claro */
+  font-size: 1.2em;
+
+}
+
+/*Estilo Carrusel*/
+.carousel {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+  margin-top: 15px;
+}
+
+.carousel-images img {
+  width: 100%;
+  height: auto;
+  flex: 0 0 100%;
+  object-fit: cover;
+}
+
+.indicators {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+}
+
+.indicators span {
+  width: 10px;
+  height: 10px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.indicators span.active {
+  background: rgba(255,255,255,1);
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.15);
+}
+
+.button-prev {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  transform: translateY(-50%);
+  left: 0;
+}
+
+.button-next {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  transform: translateY(-50%);
+  right: 0;
+}
+
+nav {
+  text-align: center;
+  margin: 20px 0;
+}
+nav a {
+  text-decoration: none;
+  color: #0288d1;
+  margin: 0 15px;
+  font-size: 1.2em;
+}
+nav a:hover {
+  color: #01579b;
+}
+section {
+  padding: 20px;
+  margin: 0 10%;
+}
+
+/* Style Modal1 */
+.modal {
+  display: none; /* Ocultar el modal por defecto */
+  position: fixed; /* Mantener el modal en su lugar */
+  z-index: 1; /* Asegurar que esté en la parte superior */
+  left: 0;
+  top: 0;
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Altura completa */
+  overflow: auto; /* Habilitar desplazamiento si es necesario */
+  background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro con opacidad */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto; /* Centrar el modal */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Ancho del modal */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
