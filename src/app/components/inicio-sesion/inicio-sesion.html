@@ -1,1 +1,10 @@
-<p>inicio-sesion works!</p>
+<app-encabezado></app-encabezado>
+<div class="login-container">
+    <h2>Iniciar sesión</h2>
+    <form action="#" method="POST">
+        <input type="text" class="input-field" placeholder="Usuario">
+        <input type="password" class="input-field" placeholder="Contraseña">
+        <button type="button" class="btn-login" routerLink="/menu-main">Iniciar sesión</button>
+    </form>
+    <a routerLink="/recuperar-contrasena" class="forgot-password">¿Olvidaste tu contraseña?</a>
+</div>

@@ -1,0 +1,122 @@
+ body {
+     font-family: Arial, sans-serif;
+     background-color: white;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     margin: 0;
+ }
+
+ .login-container {
+     background-color: #fff;
+     padding: 30px;
+     border-radius: 8px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+     width: 300px;
+     text-align: center;
+     margin-left: 560px;
+     margin-top: 100px;
+ }
+
+ .login-container h2 {
+     color: #007bff;
+     margin-bottom: 20px;
+ }
+
+ .input-field {
+     width: 100%;
+     padding: 10px;
+     margin-bottom: 15px;
+     border: 1px solid #ddd;
+     border-radius: 5px;
+     font-size: 16px;
+ }
+
+ .input-field:focus {
+     border-color: #007bff;
+     outline: none;
+ }
+
+ .btn-login {
+     width: 100%;
+     padding: 12px;
+     background-color: #007bff;
+     color: white;
+     border: none;
+     border-radius: 5px;
+     font-size: 16px;
+     cursor: pointer;
+ }
+
+ .btn-login:hover {
+     background-color: #0056b3;
+ }
+
+ .forgot-password {
+     display: block;
+     margin-top: 10px;
+     font-size: 14px;
+     color: #007bff;
+     text-decoration: none;
+ }
+
+ .forgot-password:hover {
+     text-decoration: underline;
+ }
+
+ .recovery-container {
+     background-color: #fff;
+     padding: 30px;
+     border-radius: 8px;
+     box-shadow: 0 4px 10px hsl(217, 92%, 45%);
+     width: 320px;
+     text-align: center;
+     margin-left: 560px;
+     margin-top: 100px;
+ }
+
+ .recovery-container h2 {
+     color: #007bff;
+     margin-bottom: 20px;
+ }
+
+ .input-field {
+     width: 100%;
+     padding: 10px;
+     margin-bottom: 15px;
+     border: 1px solid #ddd;
+     border-radius: 5px;
+     font-size: 16px;
+ }
+
+ .input-field:focus {
+     border-color: #007bff;
+     outline: none;
+ }
+
+ .btn-recover {
+     width: 100%;
+     padding: 12px;
+     background-color: #007bff;
+     color: white;
+     border: none;
+     border-radius: 5px;
+     font-size: 16px;
+     cursor: pointer;
+ }
+
+ .btn-recover:hover {
+     background-color: #0056b3;
+ }
+
+ .back-to-login {
+     display: block;
+     margin-top: 15px;
+     font-size: 14px;
+     color: #007bff;
+     text-decoration: none;
+ }
+
+ .back-to-login:hover {
+     text-decoration: underline;
+ }

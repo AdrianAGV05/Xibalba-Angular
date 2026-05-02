@@ -1,1 +1,309 @@
-<p>menu-main works!</p>
+<app-encabezado></app-encabezado>
+
+<body onload="menu_desp()">
+
+    <header>
+        <h1>Sistema Gestor de Información </h1>
+        <a href="index.html" style="color: white;"> Cerrar Sesion</a>
+    </header>
+
+    </nav>
+
+    <body>
+
+        <!--Cololocar en la parte derecha de la pantalla burbujas con una breve explicación del contenido de cada aprtado del menú-->
+        <div class="notification-container">
+            <span class="notification-icon" onclick="toggleNotifications()">🔔</span>
+            <span class="notification-count">3</span> <!-- Número de notificaciones -->
+
+            <!-- Buzón de notificaciones -->
+            <div class="notification-dropdown" id="notificationDropdown">
+                <div class="notification-item">Nueva notificación 1</div>
+                <div class="notification-item">Nueva notificación 2</div>
+                <div class="notification-item">Nueva notificación 3</div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <script>
+            function toggleNotifications() {
+                const dropdown = document.getElementById('notificationDropdown');
+                dropdown.classList.toggle('active'); // Alternar la visibilidad del buzón
+            }
+
+            // Opcional: Ocultar el buzón al hacer clic fuera de él
+            window.addEventListener('click', function (event) {
+                const dropdown = document.getElementById('notificationDropdown');
+                const icon = document.querySelector('.notification-icon');
+                if (!icon.contains(event.target) && !dropdown.contains(event.target)) {
+                    dropdown.classList.remove('active');
+                }
+            });
+        </script>
+
+
+
+
+        <div class="container">
+            <div class="barra">
+                <b>
+                    <FONT color="black">Gestion de Pozos</FONT>
+                </b>
+                <img src="img/lista1.png" alt="Gestion de Pozos">
+                <p>
+                    <FONT color="black">Visualiza y edita los pozos del Organismo Operador.</FONT>
+                </p>
+                <!-- Un hover en visualiza y edit...... y al darle click despliuega la opcion listdo de pozos-->
+                <nav class="nav">
+                    <ul class="list">
+
+                        <li class="list_item">
+                            <div class="list_button">
+                            </div>
+                        </li>
+
+                        <li class="list_item list_item--click">
+                            <div class="list_button list_button--click">
+                                <a href="#" class="nav_link">Gestion de Pozos</a>
+                                <img src="assets/arrow.svg" class="list_arrow">
+                            </div>
+
+                            <ul class="list_show">
+                                <li class="list_inside">
+                                    <a href="Listado_pozos.html" class="nav_link nav_link--inside">Listado de pozos</a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+
+
+                        <li class="list_item">
+                            <div class="list_button">
+                            </div>
+                        </li>
+
+                    </ul>
+                </nav>
+
+            </div>
+
+
+
+            <div class="barra">
+                <b>
+                    <FONT color="black">Gestion de Captura</FONT>
+                </b>
+                <img src="img/celularcap.png" alt="Gestion de Captura">
+                <p>
+                    <FONT color="black">Administra la información enviada por los operadores.</FONT>
+                </p>
+
+                <nav class="nav">
+                    <ul class="list">
+
+                        <li class="list_item">
+                            <div class="list_button">
+                            </div>
+                        </li>
+
+                        <li class="list_item list_item--click">
+                            <div class="list_button list_button--click">
+                                <a href="#" class="nav_link">Gestion de Captura</a>
+                                <img src="assets/arrow.svg" class="list_arrow">
+                            </div>
+
+                            <ul class="list_show">
+                                <li class="list_inside">
+                                    <a href="Listado_operadores.html" class="nav_link nav_link--inside">Operadores</a>
+                                </li>
+                                <li class="list_inside">
+                                    <a href="Gestion_de_Operacion.html" class="nav_link nav_link--inside">Operacion</a>
+                                </li>
+                                <li class="list_inside">
+                                    <a href="Gestion_de_mtto.html" class="nav_link nav_link--inside">Mantenimiento</a>
+                                </li>
+                                <li class="list_inside">
+                                    <a href="Gestion_de_alerta.html" class="nav_link nav_link--inside">Alertas</a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+
+                        <li class="list_item">
+                            <div class="list_button">
+                            </div>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+
+
+
+
+
+            <div class="barra">
+                <b>
+                    <FONT color="black">Gestion de procesamiento</FONT>
+                </b>
+                <img src="img/procesamiento-de-datos.png" alt="Gestion de procesamiento">
+                <p>
+                    <FONT color="black">Genera indicadores:
+                        <!--Consumo energético
+                        Estimacion tipo (icono admiracion y sale eplicacion )Estos indicadores se estiman considerando que todos los pozos cuentan con los mismos equipos y accesorios
+                        <ul>
+                          <li>
+                              <a>Consumo energético total</a>
+                          </li>
+                          <li>
+                              <a>Al inicio de la operación</a>
+                          </li>
+                          <li>
+                              <a>Pérdidas de carga por la por fricción</a>
+                          </li>
+                          <li>
+                              <a>Consumo adicional por variación del nivel puezométrico</a>
+                          </li>
+                          <li>
+                              <a>variación de consumo por intensidad del motor</a>
+                          </li>
+                          <li>
+                              <a>Variación de consumo por pérdidas de carga</a>
+                          </li>
+                      </ul>
+
+                       (click) Estimacion por caracteristicas individuales (signo admiracion) Estos indicadores estiman considerando las caracteristicas individuales de los equipos y accesorios instalados en los pozos 
+                        <ul>
+                          <li>
+                              <a>Consumo energético total</a>
+                          </li>
+                          <li>
+                              <a>Al inicio de la operación</a>
+                          </li>
+                          <li>
+                              <a>Pérdidas de carga por la por fricción</a>
+                          </li>
+                          <li>
+                              <a>Consumo adicional por variación del nivel puezométrico</a>
+                          </li>
+                          <li>
+                              <a>variación de consumo por intensidad del motor</a>
+                          </li>
+                          <li>
+                              <a>Variación de consumo por pérdidas de carga</a>
+                          </li>
+                      </ul>
+
+                    Ambientales 
+                    
+                    
+                    
+                    Otros.
+
+-->
+                        <a href="nvo-usuario-prueba.html">
+                            <i class="fa-solid fa-circle-info"></i> </a>
+
+                        <nav class="nav">
+                            <ul class="list">
+
+                                <li class="list_item">
+                                    <div class="list_button">
+                                    </div>
+                                </li>
+
+                                <li class="list_item list_item--click">
+                                    <div class="list_button list_button--click">
+                                        <a href="#" class="nav_link">Gestion de Procesamiento</a>
+                                        <img src="assets/arrow.svg" class="list_arrow">
+                                    </div>
+
+                                    <ul class="list_show">
+                                        <li class="list_inside">
+                                            <a href="Indicadores_indv.html" class="nav_link nav_link--inside">Consumo
+                                                energetico</a>
+                                        </li>
+
+
+                                    </ul>
+                                </li>
+
+
+                                <li class="list_item">
+                                    <div class="list_button">
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </nav>
+
+
+                    </FONT>
+                </p>
+            </div>
+            <div class="barra">
+                <b>
+                    <FONT color="black">Gestion de Visualización</FONT>
+                </b>
+                <img src="img/data-visualization.png" alt="Gestion de Visualización">
+                <p>
+                    <FONT color="black">Visualiza datos:
+                        <br>
+                        -Tabulares
+                        <br>
+                        -Gráficos
+                        <br>
+                        -Cartográficos
+                </p>
+                </FONT>
+
+
+
+                <nav class="nav">
+                    <ul class="list">
+
+                        <li class="list_item">
+                            <div class="list_button">
+                            </div>
+                        </li>
+
+                        <li class="list_item list_item--click">
+                            <div class="list_button list_button--click">
+                                <a href="#" class="nav_link">Gestion de Visualización</a>
+                                <img src="assets/arrow.svg" class="list_arrow">
+                            </div>
+
+                            <ul class="list_show">
+                                <li class="list_inside">
+                                    <a href="Listado_pozos.html" class="nav_link nav_link--inside">Datos de Pozo</a>
+                                </li>
+                                <li class="list_inside">
+                                    <a href="" class="nav_link nav_link--inside">Datos de operación</a>
+                                </li>
+                                <li class="list_inside">
+                                    <a href="#" class="nav_link nav_link--inside">Datos de mantenimiento</a>
+                                </li>
+                                <li class="list_inside">
+                                    <a href="#" class="nav_link nav_link--inside">Registro de alertas</a>
+                                </li>
+                                <li class="list_inside">
+                                    <a href="#" class="nav_link nav_link--inside">Indicadores</a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="list_item">
+                            <div class="list_button">
+                            </div>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+        <app-pie-pagina></app-pie-pagina>
