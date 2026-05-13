@@ -1,0 +1,47 @@
+<app-encabezado></app-encabezado>
+
+<div class="gestion-container">
+    <h1 class="page-title">Alertas recibidas</h1>
+    
+    <div class="table-container">
+        <table class="operacion-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tipo de alerta</th>
+                    <th>Fecha y hora de alerta</th>
+                    <th>Operador</th>
+                    <th>Observaciones de operador</th>
+                    <th>Alerta resuelta</th>
+                    <th>Capturar nueva alerta</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="input-cell">
+                        <input type="text" class="input-field" placeholder="">
+                    </td>
+                    <td></td>
+                    <td class="input-cell">
+                        <textarea class="textarea-field" rows="2"></textarea>
+                    </td>
+                    <td class="center-content action-icons">
+                        <button class="icon-btn btn-check"><i class="fa-regular fa-square-check"></i></button>
+                        <button class="icon-btn btn-delete"><i class="fa-solid fa-delete-left"></i></button>
+                    </td>
+                    <td class="center-content">
+                        <button class="icon-btn btn-add"><i class="fa-solid fa-square-plus"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="footer-actions">
+        <button class="btn-back" routerLink="/menu-main">Regresar</button>
+    </div>
+</div>
+
+<app-pie-pagina></app-pie-pagina>

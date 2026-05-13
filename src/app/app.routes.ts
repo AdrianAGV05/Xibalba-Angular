@@ -2,9 +2,37 @@ import { Routes } from '@angular/router';
 import { PaginaInicio } from './components/pagina-inicio/pagina-inicio';
 import { InicioSesion } from './components/inicio-sesion/inicio-sesion';
 import { MenuMain } from './components/menu-main/menu-main';
+import { PiePagina } from './components/pie-pagina/pie-pagina';
+import { Encabezado } from './components/encabezado/encabezado';
+import { NvoUsuario } from './components/nvo-usuario/nvo-usuario';
+import { RecContrasena } from './components/rec-contrasena/rec-contrasena';
+import { ListadoPozos } from './components/listado-pozos/listado-pozos';
+import { NuevoPozo } from './components/nuevo-pozo/nuevo-pozo';
+import { ListadoOperadores } from './components/listado-operadores/listado-operadores';
+import { NuevoOperador } from './components/nuevo-operador/nuevo-operador';
+import { GestionDeOperacion } from './components/gestion-de-operacion/gestion-de-operacion';
+import { GestionDeMtto } from './components/gestion-de-mtto/gestion-de-mtto';
+import { GestionDeAlerta } from './components/gestion-de-alerta/gestion-de-alerta';
+import { AgregarRegistroMtto } from './components/agregar-registro-mtto/agregar-registro-mtto';
+import { EditarMtto } from './components/editar-mtto/editar-mtto';
+import { IndicadoresIndv } from './components/indicadores-indv/indicadores-indv';
 
 export const routes: Routes = [
     { path: '', component: PaginaInicio },
     { path: 'inicio-sesion', component: InicioSesion },
     { path: 'menu-main', component: MenuMain },
+    { path: 'pie-pagina', component: PiePagina },
+    { path: 'encabezado', component: Encabezado },
+    { path: 'nvo-usuario', component: NvoUsuario },
+    { path: 'rec-contrasena', component: RecContrasena },
+    { path: 'listado-pozos', component: ListadoPozos },
+    { path: 'nuevo-pozo', component: NuevoPozo },
+    { path: 'listado-operadores', component: ListadoOperadores },
+    { path: 'nuevo-operador', component: NuevoOperador },
+    { path: 'gestion-de-operacion', component: GestionDeOperacion },
+    { path: 'gestion-de-mtto', component: GestionDeMtto },
+    { path: 'gestion-de-alerta', component: GestionDeAlerta },
+    { path: 'agregar-registro-mtto', component: AgregarRegistroMtto },
+    { path: 'editar-mtto', component: EditarMtto },
+    { path: 'indicadores-indv', component: IndicadoresIndv }
 ];

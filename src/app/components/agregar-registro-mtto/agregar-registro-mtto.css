@@ -1,0 +1,221 @@
+.form-container {
+    padding: 40px 20px;
+    background-color: #f5f7fa;
+    min-height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+.form-card {
+    background: white;
+    width: 100%;
+    max-width: 800px;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.page-title {
+    color: #000080;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.modern-table-wrapper {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e0e6ed;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    margin-bottom: 30px;
+}
+
+.modern-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+.modern-data-table thead th {
+    background-color: #f1f5f9;
+    color: #0056b3;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 16px;
+    text-align: center;
+    border-bottom: 2px solid #e0e6ed;
+}
+
+.col-concepto {
+    width: 40%;
+    border-right: 1px solid #e0e6ed;
+}
+
+.col-datos {
+    width: 60%;
+}
+
+.modern-data-table tbody tr {
+    border-bottom: 1px solid #e0e6ed;
+    transition: background-color 0.2s ease;
+}
+
+.modern-data-table tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+.modern-data-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.label-cell {
+    padding: 16px 24px;
+    color: #334155;
+    font-weight: 500;
+    font-size: 1.05rem;
+    border-right: 1px solid #e0e6ed;
+    vertical-align: middle;
+}
+
+.input-cell, .slider-cell {
+    padding: 16px 24px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.modern-select {
+    width: 100%;
+    max-width: 250px;
+    padding: 10px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #334155;
+    background-color: #fff;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.modern-select:focus {
+    border-color: #0288d1;
+    box-shadow: 0 0 0 3px rgba(2, 136, 209, 0.1);
+}
+
+.modern-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #334155;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.modern-textarea:focus {
+    border-color: #0288d1;
+    box-shadow: 0 0 0 3px rgba(2, 136, 209, 0.1);
+}
+
+.slider-header {
+    color: #0056b3;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.modern-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: #e2e8f0;
+    outline: none;
+    margin: 10px 0 15px;
+    cursor: pointer;
+}
+
+.modern-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #0288d1;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(2, 136, 209, 0.4);
+    border: 2px solid white;
+    transition: transform 0.2s;
+}
+
+.modern-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+.slider-value {
+    color: #0056b3;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.slider-value strong {
+    color: #0f172a;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.btn-regresar, .btn-aceptar {
+    padding: 12px 40px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-regresar, .btn-aceptar {
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+.btn-regresar:hover, .btn-aceptar:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+    .modern-data-table thead {
+        display: none;
+    }
+    .modern-data-table, .modern-data-table tbody, .modern-data-table tr, .modern-data-table td {
+        display: block;
+        width: 100%;
+    }
+    .modern-data-table tr {
+        margin-bottom: 15px;
+        border: 1px solid #e0e6ed;
+        border-radius: 8px;
+    }
+    .label-cell {
+        border-right: none;
+        border-bottom: 1px solid #e0e6ed;
+        background-color: #f8fafc;
+        font-weight: 600;
+    }
+}

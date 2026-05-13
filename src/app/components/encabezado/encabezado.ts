@@ -4,7 +4,7 @@ import { PiePagina } from '../pie-pagina/pie-pagina';
 
 @Component({
   selector: 'app-encabezado',
-  imports: [PiePagina, RouterLink],
+  imports: [RouterLink],
   templateUrl: './encabezado.html',
   styleUrl: './encabezado.css',
 })

@@ -1,0 +1,146 @@
+<app-encabezado></app-encabezado>
+
+<div class="form-container">
+    <div class="form-card">
+        <h2 class="page-title">Nuevo registro</h2>
+
+        <div class="modern-table-wrapper">
+            <table class="modern-data-table">
+                <thead>
+                    <tr>
+                        <th class="col-concepto">Concepto</th>
+                        <th class="col-datos">Datos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="label-cell">Clave de pozo</td>
+                        <td class="input-cell">
+                            <select class="modern-select">
+                                <option value="">Seleccione una clave</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-cell">Tipo de motor</td>
+                        <td class="input-cell">
+                            <select class="modern-select">
+                                <option value="convencional">Convencional</option>
+                                <option value="sumergible">Sumergible</option>
+
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-cell">Hp de motor</td>
+                        <td class="slider-cell">
+                            <div class="slider-header">Hp</div>
+                            <input type="range" min="0" max="1000" [(ngModel)]="hpMotor" class="modern-slider">
+                            <div class="slider-value">Valor seleccionado: <strong>{{ hpMotor }}</strong></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-cell">Kw de motor</td>
+                        <td class="slider-cell">
+                            <div class="slider-header">Kw</div>
+                            <input type="range" min="0" max="1000" [(ngModel)]="kwMotor" class="modern-slider">
+                            <div class="slider-value">Valor seleccionado: <strong>{{ kwMotor }}</strong></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-cell">Eficiencia del motor</td>
+                        <td class="slider-cell">
+                            <div class="slider-header">% de eficiencia</div>
+                            <input type="range" min="0" max="100" [(ngModel)]="eficienciaMotor" class="modern-slider">
+                            <div class="slider-value">Valor seleccionado: <strong>{{ eficienciaMotor }}</strong></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-cell">Tipo de tablero</td>
+                        <td class="input-cell">
+                            <select class="modern-select">
+                                <option value="monofasico">Monofásico</option>
+                                <option value="bifasico">Bifásico</option>
+                                <option value="trifasico">Trifásico</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-cell">Capacidad de tablero amp</td>
+                        <td class="slider-cell">
+                            <div class="slider-header">Amperes</div>
+                            <input type="range" min="0" max="500" [(ngModel)]="capacidadTablero" class="modern-slider">
+                            <div class="slider-value">Valor seleccionado: <strong>{{ capacidadTablero }}</strong></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-cell">Tipo de transformador</td>
+                        <td class="input-cell">
+                            <select class="modern-select">
+                                <option value="elevado">Elevado</option>
+                                <option value="pedestal">Pedestal</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-cell">Capacidad de transformador kVA</td>
+                        <td class="slider-cell">
+                            <div class="slider-header">kVA</div>
+                            <input type="range" min="0" max="1000" [(ngModel)]="capacidadTransformador"
+                                class="modern-slider">
+                            <div class="slider-value">Valor seleccionado: <strong>{{ capacidadTransformador }}</strong>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-cell">Calibre de cable sumergible</td>
+                        <td class="input-cell">
+                            <select class="modern-select">
+                                <option value="0">0</option>
+                                <option value="00">00</option>
+                                <option value="000">000</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-cell">Longitud de cable sumergible</td>
+                        <td class="slider-cell">
+                            <div class="slider-header">Metros</div>
+                            <input type="range" min="0" max="500" [(ngModel)]="longitudCable" class="modern-slider">
+                            <div class="slider-value">Valor seleccionado: <strong>{{ longitudCable }}</strong></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-cell">Diámetro de tubería</td>
+                        <td class="slider-cell">
+                            <div class="slider-header">Pulgadas</div>
+                            <input type="range" min="0" max="100" [(ngModel)]="diametroTuberia" class="modern-slider">
+                            <div class="slider-value">Valor seleccionado: <strong>{{ diametroTuberia }}</strong></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-cell">Longitud de tubería</td>
+                        <td class="slider-cell">
+                            <div class="slider-header">Metros</div>
+                            <input type="range" min="0" max="1000" [(ngModel)]="longitudTuberia" class="modern-slider">
+                            <div class="slider-value">Valor seleccionado: <strong>{{ longitudTuberia }}</strong></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-cell">Observaciones</td>
+                        <td class="input-cell">
+                            <textarea class="modern-textarea" rows="3"></textarea>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="form-actions">
+            <button type="button" class="btn-regresar" routerLink="/gestion-de-mtto">Regresar</button>
+            <button type="button" class="btn-aceptar">Aceptar</button>
+        </div>
+    </div>
+</div>
+
+<app-pie-pagina></app-pie-pagina>

@@ -1,0 +1,143 @@
+.gestion-container {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    min-height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.page-title {
+    color: #000080;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.add-record-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.add-record-link {
+    color: #000080;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.add-record-link:hover {
+    text-decoration: underline;
+}
+
+.table-container {
+    width: 100%;
+    max-width: 900px;
+    overflow-x: auto;
+    margin-bottom: 30px;
+}
+
+.operacion-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.operacion-table th, .operacion-table td {
+    border: 1px solid #444;
+    padding: 8px 12px;
+}
+
+.operacion-table th {
+    background-color: #aeb5b9;
+    color: #0056b3;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.center-content {
+    text-align: center;
+}
+
+.input-cell {
+    padding: 8px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #777;
+    box-sizing: border-box;
+}
+
+.btn-ver {
+    background-color: white;
+    border: 1px solid #777;
+    padding: 2px 10px;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.action-icons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-check {
+    color: green;
+}
+
+.btn-delete {
+    color: red;
+}
+
+.btn-edit {
+    color: black;
+}
+
+.btn-add {
+    color: black;
+    font-size: 2rem;
+}
+
+.footer-actions {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-back {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 6px;
+    font-weight: normal;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-back:hover {
+    background-color: #0056b3;
+}

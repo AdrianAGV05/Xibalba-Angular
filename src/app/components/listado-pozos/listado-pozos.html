@@ -1,1 +1,60 @@
-<p>listado-pozos works!</p>
+<app-encabezado></app-encabezado>
+
+<main class="listado-container">
+    <div class="header-section">
+        <h2>Listado de Pozos</h2>
+        <button class="btn-add" routerLink="/nuevo-pozo">
+            <i class="fa-solid fa-plus"></i> Agregar Nuevo Pozo
+        </button>
+    </div>
+
+    <div class="table-responsive">
+        <table class="pozos-table">
+            <thead>
+                <tr>
+                    <th>Clave de Pozo</th>
+                    <th>Nombre del Pozo</th>
+                    <th>Ramal</th>
+                    <th>Profundidad de perforación (metros)</th>
+                    <th>Diametro de perforación (pulgadas)</th>
+                    <th>Diametro de ADEME (pulgadas)</th>
+                    <th>Profundidad de ADEME (metros)</th>
+                    <th>Acciones</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>Pozo Central</td>
+                    <td>Sector Norte</td>
+                    <td><span class="status-active">Activo</span></td>
+                    <td class="actions">
+                        <button class="btn-edit" title="Editar"><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button class="btn-delete" title="Eliminar"><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>Pozo Sur-A1</td>
+                    <td>Sector Sur</td>
+                    <td><span class="status-inactive">Inactivo</span></td>
+                    <td class="actions">
+                        <button class="btn-edit" title="Editar"><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button class="btn-delete" title="Eliminar"><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                </tr>
+                <!-- Más filas pueden ser agregadas dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="footer-actions">
+        <button class="btn-back" routerLink="/menu-main">
+            <i class="fa-solid fa-arrow-left"></i> Regresar al Menú Principal
+        </button>
+    </div>
+</main>
+
+<app-pie-pagina></app-pie-pagina>

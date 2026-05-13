@@ -1,1 +1,107 @@
-<p>nuevo-pozo works!</p>
+<app-encabezado></app-encabezado>
+
+<main class="form-container">
+    <div class="form-card">
+        <div class="form-header">
+            <i class="fa-solid fa-bore-hole"></i>
+            <h2>Registro de Nuevo Pozo</h2>
+            <p>Complete la información técnica del pozo para su registro en el sistema.</p>
+        </div>
+
+        <form class="pozo-form">
+            <div class="form-grid">
+                <!-- Columna 1 -->
+                <div class="form-column">
+                    <div class="input-group">
+                        <label>Clave de Pozo</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-key"></i>
+                            <input type="text" placeholder="Ej: PZO-2024-001">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Nombre del Pozo</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-signature"></i>
+                            <input type="text" placeholder="Ej: Pozo Central Sector Norte">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Ramal</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-code-branch"></i>
+                            <input type="text" placeholder="Ej: Ramal Principal">
+                        </div>
+                    </div>
+
+                    <div class="input-group slider-group">
+                        <label>Profundidad de Perforación (m)</label>
+                        <div class="slider-container">
+                            <input type="range" min="30" max="250" [(ngModel)]="profPerforacion" name="profPerforacion" class="modern-slider">
+                            <div class="slider-value">
+                                <span>Valor seleccionado: </span>
+                                <strong>{{ profPerforacion }} m</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna 2 -->
+                <div class="form-column">
+                    <div class="input-group slider-group">
+                        <label>Diámetro de Perforación (in)</label>
+                        <div class="slider-container">
+                            <input type="range" min="10" max="40" [(ngModel)]="diamPerforacion" name="diamPerforacion" class="modern-slider">
+                            <div class="slider-value">
+                                <span>Valor seleccionado: </span>
+                                <strong>{{ diamPerforacion }} in</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-group slider-group">
+                        <label>Diámetro de ADEME (in)</label>
+                        <div class="slider-container">
+                            <input type="range" min="10" max="40" [(ngModel)]="diamAdeme" name="diamAdeme" class="modern-slider">
+                            <div class="slider-value">
+                                <span>Valor seleccionado: </span>
+                                <strong>{{ diamAdeme }} in</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Profundidad de ADEME (m)</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-ruler-vertical"></i>
+                            <input type="number" placeholder="0.00">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Ubicación / Sector</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <input type="text" placeholder="Ej: Zona Industrial">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn-cancel" routerLink="/listado-pozos">Cancelar</button>
+                <button type="submit" class="btn-submit">Guardar Registro</button>
+            </div>
+        </form>
+    </div>
+    <br>
+    <div class="footer-actions">
+        <button class="btn-back" routerLink="/listado-pozos">
+            <i class="fa-solid fa-arrow-left"></i> Regresar al Listado de Pozos
+        </button>
+    </div>
+</main>
+
+<app-pie-pagina></app-pie-pagina>

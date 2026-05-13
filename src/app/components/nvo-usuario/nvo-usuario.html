@@ -1,1 +1,42 @@
-<p>nvo-usuario works!</p>
+<app-encabezado></app-encabezado>
+
+<div class="registration-container">
+    <div class="registration-card">
+        <h2>Nuevo usuario</h2>
+        
+        <form action="#" method="POST">
+            <div class="input-group">
+                <input type="text" class="input-field" placeholder="Nombre completo">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div class="input-group">
+                <input type="text" class="input-field" placeholder="Usuario">
+                <i class="fa-solid fa-at"></i>
+            </div>
+
+            <div class="input-group">
+                <input type="email" class="input-field" placeholder="Correo electrónico">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+
+            <div class="input-group">
+                <input type="password" class="input-field" placeholder="Contraseña">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+
+            <div class="input-group">
+                <input type="password" class="input-field" placeholder="Confirmar contraseña">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+            <button type="button" class="btn-register" routerLink="/inicio-sesion">Registrarse</button>
+        </form>
+
+        <div class="back-link">
+            ¿Ya tienes una cuenta? <a routerLink="/inicio-sesion">Inicia sesión</a>
+        </div>
+    </div>
+</div>
+
+<app-pie-pagina></app-pie-pagina>

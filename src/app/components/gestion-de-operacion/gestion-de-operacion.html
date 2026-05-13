@@ -1,0 +1,48 @@
+<app-encabezado></app-encabezado>
+
+<div class="gestion-container">
+    <h1 class="page-title">Datos de operación</h1>
+    
+    <div class="table-container">
+        <table class="operacion-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Actividad</th>
+                    <th>Fecha y hora de registro</th>
+                    <th>Operador</th>
+                    <th>Registro</th>
+                    <th>Acciones</th>
+                    <th>Agregar registro</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="input-cell">
+                        <input type="text" class="input-field" placeholder="">
+                    </td>
+                    <td></td>
+                    <td class="center-content">
+                        <button class="btn-ver">Ver</button>
+                    </td>
+                    <td class="center-content action-icons">
+                        <button class="icon-btn btn-check"><i class="fa-regular fa-square-check"></i></button>
+                        <button class="icon-btn btn-delete"><i class="fa-solid fa-delete-left"></i></button>
+                        <button class="icon-btn btn-edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                    </td>
+                    <td class="center-content">
+                        <button class="icon-btn btn-add"><i class="fa-solid fa-square-plus"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="footer-actions">
+        <button class="btn-back" routerLink="/menu-main">Regresar</button>
+    </div>
+</div>
+
+<app-pie-pagina></app-pie-pagina>

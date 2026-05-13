@@ -1,0 +1,34 @@
+<app-encabezado></app-encabezado>
+
+<div class="listado-container">
+    <h1 class="page-title">Listado de operadores</h1>
+
+    <div class="add-operator-container">
+        <a routerLink="/nuevo-operador" class="add-operator-link">
+            Agregar Operador <i class="fa-solid fa-user-plus"></i>
+        </a>
+    </div>
+
+    <div class="table-container">
+        <table class="operadores-table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Correo electrónico</th>
+                    <th>Contraseña</th>
+                    <th>Número de teléfono</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Los datos se agregarán dinámicamente aquí -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="footer-actions">
+        <button class="btn-back" routerLink="/menu-main">Regresar</button>
+    </div>
+</div>
+
+<app-pie-pagina></app-pie-pagina>

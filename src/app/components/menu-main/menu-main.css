@@ -1,136 +1,169 @@
 /* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: white;
+:host {
+    display: block;
+    background-color: #f0f2f5;
+    min-height: 100vh;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
+.menu-content {
+    width: 100%;
 }
 
-/* Estilo del botón del menú */
-.dropbtn {
-    background-color: #4CAF50;
+.menu-content header {
+    background-color: #0288d1;
     color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.menu-content header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.menu-content header a {
+    color: white;
+    text-decoration: underline;
+    font-size: 1.1rem;
+}
+
+.notification-container {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 100;
+}
+
+.notification-icon {
+    font-size: 1.8rem;
     cursor: pointer;
 }
 
-/* Contenido del menú desplegable */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 50px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
+.barra {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.barra:hover {
+    transform: translateY(-5px);
+}
+
+.barra b {
+    font-size: 1.2rem;
+    color: #2d3436;
+    margin-bottom: 20px;
     display: block;
 }
 
-/* Cambiar el color cuando el mouse pasa sobre un enlace */
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
+.barra img {
+    width: 100%;
+    max-width: 200px;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 20px;
 }
 
-/* Mostrar el contenido del menú cuando se pasa el mouse sobre el contenedor */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Cambiar color del botón cuando el mouse pasa sobre él */
-.dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-}
-
-
-
-
-/*Estilo menu hamburguesa desplegable*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.barra-text, .barra p {
+    flex-grow: 1;
+    color: #636e72;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
 
 .nav {
-    width: 235px;
-
-}
-
-.nav_link {
-    color: #303440;
-    display: block;
-    padding: 10px 0;
-    text-decoration: none;
-}
-
-.nav_link--inside {
-    border-radius: 6px;
-    padding-left: 20px;
-
-}
-
-.nav_link--inside:hover {
-    background: white;
+    width: 100%;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
 }
 
 .list {
+    list-style: none;
     width: 100%;
-    height: 30vh;
-    direction: flex;
-    justify-content: left;
-    flex-direction: column;
-    border-radius: 0 16px 16px 0;
-    background: rgb(255, 255, 255);
-
 }
 
 .list_item {
-    list-style: none;
     width: 100%;
-    text-align: left;
-    overflow: hidden;
-    font-size: 14px;
-
-}
-
-.list_item--click {
-    cursor: pointer;
 }
 
 .list_button {
     display: flex;
-    align-items: left;
-    gap: 1em;
-    width: 100%;
-    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.2s;
 }
 
-.arrow .list_arrow {
-    transform: rotate(90deg);
+.list_button:hover {
+    background: #f8f9fa;
+}
+
+.nav_link {
+    color: #0288d1;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1rem;
 }
 
 .list_arrow {
-    margin-left: auto;
-    transition: transform .3s;
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s;
+}
+
+.list_item--click .list_show {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+/* Cuando se implemente la lógica de 'active' en el componente */
+.list_item--click.active .list_arrow {
+    transform: rotate(90deg);
+}
+
+.list_item--click.active .list_show {
+    height: auto;
+    padding: 10px 0;
 }
 
 .list_show {
-    width: 80%;
-    margin-left: auto;
-    border-left: 2px solid #303440;
     list-style: none;
-    transition: height .4s;
-    height: 0;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.list_inside {
+    padding: 8px 0;
+}
+
+.nav_link--inside {
+    color: #636e72;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.nav_link--inside:hover {
+    color: #0288d1;
 }

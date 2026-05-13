@@ -1,0 +1,33 @@
+<app-encabezado></app-encabezado>
+
+<div class="nuevo-operador-container">
+    <h1 class="page-title">Ingresar datos de operador</h1>
+    
+    <div class="table-container">
+        <table class="form-table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Correo electrónico</th>
+                    <th>Contraseña</th>
+                    <th>Número de teléfono</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" class="input-field" placeholder=""></td>
+                    <td><input type="email" class="input-field" placeholder=""></td>
+                    <td><input type="password" class="input-field" placeholder=""></td>
+                    <td><input type="tel" class="input-field" placeholder=""></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="action-buttons">
+        <button class="btn-action" routerLink="/listado-operadores">Regresar</button>
+        <button class="btn-action">Aceptar</button>
+    </div>
+</div>
+
+<app-pie-pagina></app-pie-pagina>
